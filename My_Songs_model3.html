@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline Music Player</title>
+  <!-- <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1db954;
+      margin-bottom: 40px;
+    }
+
+    .player {
+      background: #1e1e1e;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 25px auto;
+      width: 90%;
+      max-width: 500px;
+      transition: transform 0.3s;
+    }
+
+    .player:hover {
+      transform: scale(1.03);
+    }
+
+    .cover {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+      outline: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .heart {
+      display: inline-block;
+      animation: pulse 1.2s infinite ease-in-out;
+      color: red;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style> -->
+  <style>
+  body {
+    position: relative;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg.png') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  h1 {
+    color: #1db954;
+    margin-bottom: 40px;
+  }
+
+  .player {
+    background: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s;
+  }
+
+  .player:hover {
+    transform: scale(1.03);
+  }
+
+  .cover {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+  }
+
+  footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: white;
+  }
+
+  .heart {
+    display: inline-block;
+    animation: pulse 1.2s infinite ease-in-out;
+    color: red;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+</style>
+
+</head>
+<body>
+
+  <h1>🎧 My Offline MP3 Player</h1>
+
+  <div class="player">
+    <img class="cover" src="cover.png" alt="Cover 1">
+    <div class="title">Song 1</div>
+    <audio controls>
+      <source src="song1.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+
+  <footer>
+    Created with <span class="heart">❤️</span> by Rihana Fizal
+  </footer>
+
+</body>
+</html>
